@@ -20,6 +20,7 @@ public class BrojacSlova {
 
 	public static void main(String[] args) {
 		Scanner ulaz = new Scanner(System.in);
+		System.out.println("Unesite rijec: ");
 		String rijec = ulaz.nextLine();
 		System.out.println("Broj slova u stringu koji ste unijeli je: "+countLetters(rijec));
 
