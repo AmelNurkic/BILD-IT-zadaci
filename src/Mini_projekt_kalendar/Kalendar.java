@@ -39,10 +39,13 @@ public class Kalendar {
 			}
 			ulaz.close();
 
-		} else if (a == 2) {
+		} else if (a == 2) {// upisivanje napomene u fajl
 			Scanner ulaz1 = new Scanner(System.in);
 			Calendar kalendar = Calendar.getInstance();
+			// kreiranje novog kalendara
 			kalendar.clear();
+			// Podesavanje formata datuma da ne izbacuje sate, minute i ostalo
+			// jer nam treba samo datum, mjesec i godina
 			SimpleDateFormat dateFormat = new SimpleDateFormat("dd MM yyyy");
 			System.out.println("Unesite napomenu: ");
 			String napomena = ulaz1.nextLine();
@@ -52,14 +55,16 @@ public class Kalendar {
 			int godina = ulaz1.nextInt();
 			System.out.println("Unesite datum: ");
 			int dan = ulaz1.nextInt();
-
+			// podesavanje datuma kalendara pomocu varijabli koje korisnik unosi
 			kalendar.set(godina, mjesec - 1, dan);
 
 			try {
 				File fajl = new File("src\\napomene.txt");
 
 				FileWriter pisac = new FileWriter(fajl, true);
+				// zapisivanje napomene i datuma
 				pisac.write(dateFormat.format(kalendar.getTime()) + " " + napomena);
+				// novi red
 				pisac.write(System.getProperty("line.separator"));
 				pisac.close();
 
@@ -68,7 +73,7 @@ public class Kalendar {
 			}
 			System.out.println("Vasa napomena je dodana");
 
-		} else if (a == 3) {
+		} else if (a == 3) { // citanje napomena iz fajla
 			Scanner ulaz2 = new Scanner(System.in);
 			BufferedReader citac = null;
 
