@@ -34,9 +34,8 @@ public class EmployeesHours {
 		System.out.println("Unesite broj zaposlenih: ");
 		int numberOfEmployees = input.nextInt();
 		String[] namesOfEmployees = new String[numberOfEmployees];
-		namesOfEmployees[0] = "amel";
 		System.out.println("Unesite imena zaposlenih: ");
-		
+
 		for (int i = 0; i < numberOfEmployees; i++) {
 			namesOfEmployees[i] = input.next();
 		}
@@ -53,7 +52,7 @@ public class EmployeesHours {
 		for (int i = 0; i < matrix.length; i++) {
 			System.out.print(namesOfEmployees[i]);
 			for (int j = 0; j < matrix[i].length; j++) {
-				System.out.print("  " +matrix[i][j]);
+				System.out.print("  " + matrix[i][j]);
 			}
 			System.out.println();
 		}
