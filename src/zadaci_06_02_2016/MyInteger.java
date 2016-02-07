@@ -57,7 +57,7 @@ public class MyInteger {
 		return true;
 	}
 
-	// sa int
+	// nisu prazni
 	public static boolean isEven(int a) {
 		if (a % 2 == 0) {
 			return true;
