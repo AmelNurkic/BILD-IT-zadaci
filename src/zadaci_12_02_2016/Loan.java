@@ -22,7 +22,7 @@ public class Loan {
 	}
 
 	Loan(double annualInterestRate, int numberOfYears, double loanAmount) {
-		if (annualInterestRate<0 || numberOfYears<0 || loanAmount<0) {
+		if (annualInterestRate<=0 || numberOfYears<=0 || loanAmount<=0) {
 		      throw new IllegalArgumentException("Annual interest rate, number of years and loan amount must be greater than 0");
 		    }
 		this.annualInterestRate = annualInterestRate;
